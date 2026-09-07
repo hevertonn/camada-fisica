@@ -1,0 +1,83 @@
+/* ***************************************************************
+* Autor............: Heverton Dos Santos Borges
+* Matricula........: 202511495
+* Inicio...........: 06/09/2026
+* Ultima alteracao.: 06/09/2026
+* Nome.............: style.css
+* Funcao...........: Definir propriedades visuais da interface.
+*************************************************************** */
+
+.plano-fundo {
+  -fx-background-color: transparent;
+  -fx-background-size: 100% 100%;
+}
+
+.pane-principal {
+  -fx-background-image: url("../img/plano-fundo.png");
+  -fx-pref-width: 1280;
+  -fx-pref-height: 720;
+}
+
+.pane-configuracoes {
+  -fx-background-image: url("../img/plano-fundo-configuracoes.png");
+  -fx-pref-width: 275;
+  -fx-pref-height: 300;
+}
+
+.botao-codificacao-binaria {
+  -fx-background-image: url("../img/botao-codificacao-binaria.png");
+  -fx-pref-width: 225;
+  -fx-pref-height: 50;
+}
+
+.botao-codificacao-manchester {
+  -fx-background-image: url("../img/botao-codificacao-manchester.png");
+  -fx-pref-width: 225;
+  -fx-pref-height: 50;
+}
+
+.botao-codificacao-manchester-diferencial {
+  -fx-background-image: url("../img/botao-codificacao-manchester-diferencial.png");
+  -fx-pref-width: 225;
+  -fx-pref-height: 50;
+}
+
+.caixa-mensagem-neo {
+  -fx-background-image: url("../img/caixa-mensagem-neo.png");
+  -fx-pref-width: 400;
+  -fx-pref-height: 260;
+}
+
+.caixa-mensagem-morpheu {
+  -fx-background-image: url("../img/caixa-mensagem-morpheu.png");
+  -fx-pref-width: 400;
+  -fx-pref-height: 260;
+}
+
+.text-area {
+  -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane {
+  -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport {
+  -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .content {
+  -fx-background-color: transparent;
+}
+
+.botao-configuracoes {
+  -fx-background-image: url("../img/botao-configuracoes.png");  
+  -fx-pref-width: 45;
+  -fx-pref-height: 45;
+}
+
+.botao-enviar {
+  -fx-background-image: url("../img/botao-enviar.png");
+  -fx-pref-width: 110;
+  -fx-pref-height: 25;
+}
