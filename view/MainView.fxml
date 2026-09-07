@@ -10,7 +10,7 @@
 
 <StackPane xmlns="http://javafx.com/javafx/25.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
    <children>
-      <AnchorPane>
+      <AnchorPane fx:id="panePrincipal">
          <styleClass>
             <String fx:value="plano-fundo" />
             <String fx:value="pane-principal" />
@@ -22,8 +22,8 @@
                   <String fx:value="caixa-mensagem-neo" />
                </styleClass>
                <children>
-                  <TextArea layoutX="16.0" layoutY="127.0" prefHeight="85.0" prefWidth="368.0" />
-                  <Button defaultButton="true" layoutX="270.0" layoutY="231.0" mnemonicParsing="false" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="6.0">
+                  <TextArea fx:id="caixaTextoNeo" layoutX="16.0" layoutY="127.0" prefHeight="85.0" prefWidth="368.0" />
+                  <Button defaultButton="true" layoutX="270.0" layoutY="231.0" mnemonicParsing="false" onAction="#enviarMensagem" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="6.0">
                      <styleClass>
                         <String fx:value="plano-fundo" />
                         <String fx:value="botao-enviar" />
@@ -37,10 +37,10 @@
                   <String fx:value="caixa-mensagem-morpheu" />
                </styleClass>
                <children>
-                  <TextArea layoutX="15.0" layoutY="106.0" prefHeight="112.0" prefWidth="371.0" />
+                  <TextArea fx:id="caixaTextoMorpheu" layoutX="15.0" layoutY="106.0" prefHeight="112.0" prefWidth="371.0" />
                </children>
             </AnchorPane>
-            <Button cancelButton="true" layoutX="1200.0" layoutY="18.0" mnemonicParsing="false" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <Button cancelButton="true" layoutX="1200.0" layoutY="18.0" mnemonicParsing="false" onAction="#exibirPaneConfiguracoes" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                <styleClass>
                   <String fx:value="plano-fundo" />
                   <String fx:value="botao-configuracoes" />
@@ -51,7 +51,7 @@
             <GaussianBlur />
          </effect>
       </AnchorPane>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+      <AnchorPane fx:id="paneConfiguracoes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
          <styleClass>
             <String fx:value="plano-fundo" />
             <String fx:value="pane-configuracoes" />

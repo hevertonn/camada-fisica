@@ -11,11 +11,69 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.effect.GaussianBlur;
+import javafx.scene.layout.AnchorPane;
+import model.AplicacaoTransmissora;
+import model.Estado;
+import model.TipoDeCodificacaoEnum;
 
 public class MainViewController {
+  @FXML
+  private AnchorPane panePrincipal;
+  @FXML
+  private AnchorPane paneConfiguracoes;
+  @FXML
+  private TextArea caixaTextoNeo;
+  @FXML
+  private TextArea caixaTextoMorpheu;
+
+  @FXML
+  private void initialize() {
+    Estado.caixaTextoMorpheu = caixaTextoMorpheu;
+    panePrincipal.getChildren().add(Estado.representacaoSinais);
+
+    Estado.representacaoSinais.getStyleClass().add("representacao-sinais");
+    Estado.representacaoSinais.setLayoutY(430);
+  }
+
+  @FXML
+  private void enviarMensagem() {
+    String mensagem = caixaTextoNeo.getText();
+    caixaTextoNeo.setText("");
+
+    AplicacaoTransmissora.enviarParaCamadaDeAplicacao(mensagem);
+  }
 
   @FXML
   private void alterarTipoCodificacao(ActionEvent event) {
+    Button button = (Button) event.getSource();
 
+    switch (button.getUserData().toString()) {
+      case "binaria":
+        Estado.tipoDeCodificacao = TipoDeCodificacaoEnum.BINARIA;
+        break;
+      case "manchester":
+        Estado.tipoDeCodificacao = TipoDeCodificacaoEnum.MANCHESTER;
+        break;
+      case "manchester-diferencial":
+        Estado.tipoDeCodificacao = TipoDeCodificacaoEnum.MANCHESTER_DIFERENCIAL;
+        break;
+    }
+
+    esconderPaneConfiguracoes();
+  }
+
+  @FXML
+  private void exibirPaneConfiguracoes() {
+    GaussianBlur blur = new GaussianBlur();
+    panePrincipal.setEffect(blur);
+    paneConfiguracoes.setVisible(true);
+  }
+
+  private void esconderPaneConfiguracoes() {
+    panePrincipal.setEffect(null);
+    paneConfiguracoes.setVisible(false);
   }
 }
