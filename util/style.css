@@ -56,6 +56,8 @@
 
 .text-area {
   -fx-background-color: transparent;
+  -fx-text-fill: rgb(3, 202, 10);
+  -fx-highlight-fill: rgba(3, 149, 8, 0.4);
 }
 
 .text-area .scroll-pane {
@@ -71,7 +73,7 @@
 }
 
 .botao-configuracoes {
-  -fx-background-image: url("../img/botao-configuracoes.png");  
+  -fx-background-image: url("../img/botao-configuracoes.png");
   -fx-pref-width: 45;
   -fx-pref-height: 45;
 }
@@ -80,4 +82,9 @@
   -fx-background-image: url("../img/botao-enviar.png");
   -fx-pref-width: 110;
   -fx-pref-height: 25;
+}
+
+.representacao-sinais {
+  -fx-stroke-width: 3;
+  -fx-stroke: rgb(3, 202, 10);
 }

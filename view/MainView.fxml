@@ -10,7 +10,7 @@
 
 <StackPane xmlns="http://javafx.com/javafx/25.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
    <children>
-      <AnchorPane fx:id="panePrincipal">
+      <AnchorPane fx:id="panePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
          <styleClass>
             <String fx:value="plano-fundo" />
             <String fx:value="pane-principal" />
