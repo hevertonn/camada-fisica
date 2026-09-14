@@ -15,6 +15,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
 import model.AplicacaoTransmissora;
 import model.Estado;
 import model.TipoDeCodificacaoEnum;
@@ -25,6 +27,8 @@ public class MainViewController {
   @FXML
   private AnchorPane paneConfiguracoes;
   @FXML
+  private Pane paneAnimacao;
+  @FXML
   private TextArea caixaTextoNeo;
   @FXML
   private TextArea caixaTextoMorpheu;
@@ -32,10 +36,19 @@ public class MainViewController {
   @FXML
   private void initialize() {
     Estado.caixaTextoMorpheu = caixaTextoMorpheu;
-    panePrincipal.getChildren().add(Estado.representacaoSinais);
+
+    Rectangle areaDeCorte = new Rectangle(564, 55);
+    areaDeCorte.setVisible(false);
+
+    paneAnimacao.getChildren().add(Estado.representacaoSinais);
+    paneAnimacao.getChildren().add(Estado.caminhoAnimacao);
+    paneAnimacao.setClip(areaDeCorte);
 
     Estado.representacaoSinais.getStyleClass().add("representacao-sinais");
-    Estado.representacaoSinais.setLayoutY(430);
+
+    Estado.caminhoAnimacao.setStartY(55 / 2);
+    Estado.caminhoAnimacao.setEndY(55 / 2);
+    Estado.caminhoAnimacao.setVisible(false);
   }
 
   @FXML
@@ -43,6 +56,7 @@ public class MainViewController {
     String mensagem = caixaTextoNeo.getText();
     caixaTextoNeo.setText("");
 
+    Estado.transition.stop();
     AplicacaoTransmissora.enviarParaCamadaDeAplicacao(mensagem);
   }
 

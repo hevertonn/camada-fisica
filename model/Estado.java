@@ -10,10 +10,15 @@
 package model;
 
 import javafx.scene.control.TextArea;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Polyline;
+import javafx.animation.PathTransition;
+import javafx.util.Duration;
 
 public class Estado {
   public static TipoDeCodificacaoEnum tipoDeCodificacao;
   public static Polyline representacaoSinais = new Polyline();
+  public static Line caminhoAnimacao = new Line();
   public static TextArea caixaTextoMorpheu;
+  public static PathTransition transition = new PathTransition();
 }
