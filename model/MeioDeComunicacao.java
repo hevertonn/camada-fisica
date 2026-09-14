@@ -18,6 +18,11 @@ public class MeioDeComunicacao {
     ArrayList<Double> pontos = new ArrayList<>();
     double x = 40, y = 20;
 
+    pontos.add(-564d);
+    pontos.add(y);
+    pontos.add(0d);
+    pontos.add(y);
+
     for (int i = 0; i < fluxoBrutoDeBits.length; i++) {
       if (fluxoBrutoDeBits[fluxoBrutoDeBits.length - (i + 1)] == 'A') {
         pontos.add(x * i);
@@ -32,11 +37,16 @@ public class MeioDeComunicacao {
       }
     }
 
+    pontos.add(pontos.get(pontos.size() - 2));
+    pontos.add(y);
+    pontos.add(pontos.get(pontos.size() - 2) + 564);
+    pontos.add(y);
+
     Estado.representacaoSinais.getPoints().clear();
     Estado.representacaoSinais.getPoints().addAll(pontos);
 
-    Estado.caminhoAnimacao.setStartX(-Estado.representacaoSinais.getBoundsInLocal().getWidth() / 2);
-    Estado.caminhoAnimacao.setEndX(564 + Estado.representacaoSinais.getBoundsInLocal().getWidth() / 2);
+    Estado.caminhoAnimacao.setStartX(564 - Estado.representacaoSinais.getBoundsInLocal().getWidth() / 2);
+    Estado.caminhoAnimacao.setEndX(Estado.representacaoSinais.getBoundsInLocal().getWidth() / 2);
 
     Estado.transition.setNode(Estado.representacaoSinais);
     Estado.transition.setDuration(Duration.millis(Estado.representacaoSinais.getBoundsInLocal().getWidth() * 5));

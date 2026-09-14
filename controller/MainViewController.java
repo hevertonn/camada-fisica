@@ -45,6 +45,7 @@ public class MainViewController {
     paneAnimacao.setClip(areaDeCorte);
 
     Estado.representacaoSinais.getStyleClass().add("representacao-sinais");
+    Estado.representacaoSinais.getPoints().addAll(0d, 20d + 55 / 2, 564d, 20d + 55 / 2);
 
     Estado.caminhoAnimacao.setStartY(55 / 2);
     Estado.caminhoAnimacao.setEndY(55 / 2);
