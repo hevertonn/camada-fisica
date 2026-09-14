@@ -2,7 +2,7 @@
 * Autor............: Heverton Dos Santos Borges
 * Matricula........: 202511495
 * Inicio...........: 28/08/2026
-* Ultima alteracao.: 30/08/2026
+* Ultima alteracao.: 14/09/2026
 * Nome.............: CamadaAplicacaoReceptora.java
 * Funcao...........: Representar a camada de aplicacao do lado do destinatario.
 *************************************************************** */

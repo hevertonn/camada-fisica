@@ -2,7 +2,7 @@
 * Autor............: Heverton Dos Santos Borges
 * Matricula........: 202511495
 * Inicio...........: 28/08/2026
-* Ultima alteracao.: 30/08/2026
+* Ultima alteracao.: 14/09/2026
 * Nome.............: MeioDeComunicacao.java
 * Funcao...........: Meio pelo qual os dados sao compartilhados.
 *************************************************************** */
@@ -11,7 +11,6 @@ package model;
 
 import java.util.ArrayList;
 
-import javafx.animation.PathTransition;
 import javafx.util.Duration;
 
 public class MeioDeComunicacao {

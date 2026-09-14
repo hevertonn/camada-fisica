@@ -2,7 +2,7 @@
 * Autor............: Heverton Dos Santos Borges
 * Matricula........: 202511495
 * Inicio...........: 28/08/2026
-* Ultima alteracao.: 30/08/2026
+* Ultima alteracao.: 14/09/2026
 * Nome.............: CamadaFisicaReceptora.java
 * Funcao...........: Representar a camada fisica do lado do destinatario,
 * decodifica as mensagens recebidas.
